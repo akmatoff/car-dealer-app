@@ -17,3 +17,7 @@ npm run dev
 ```
 
 Access the web page on `http://localhost:3000`
+
+### Also here is a link for the deployed app
+
+https://car-dealer-app-nu.vercel.app/
