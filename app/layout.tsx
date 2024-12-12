@@ -4,7 +4,10 @@ import "./globals.css";
 import Header from "@/shared/components/Header";
 import { ToastContainer } from "react-toastify";
 
-const poppins = Poppins({ weight: ["300", "400", "500", "600", "700"] });
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Car Dealer App",
