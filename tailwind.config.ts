@@ -9,11 +9,15 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "banner-image": "url('../public/banner-car.jpg')",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "muted-foreground": "var(--muted-foreground)",
         primary: "var(--primary)",
-        primaryForeground: "var(--primary-foreground)",
+        "primary-foreground": "var(--primary-foreground)",
         content: "var(--content)",
       },
     },

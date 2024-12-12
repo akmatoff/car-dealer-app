@@ -10,13 +10,13 @@ export default function SearchBar({ className, onChange }: Props) {
   return (
     <div
       className={cn(
-        "flex items-center gap-2 w-full p-4 bg-content rounded-xl",
+        "flex items-center gap-2 w-full p-3 bg-content rounded-xl",
         className
       )}
     >
       <SearchIcon color="var(--muted-foreground)" />
       <input
-        className="outline-none"
+        className="outline-none bg-content text-foreground"
         onChange={(e) => onChange(e.target.value)}
       />
     </div>

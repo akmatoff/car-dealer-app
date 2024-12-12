@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #f0f0f0;
-  --foreground: #222;
-  --muted-foreground: #cccccc;
+  --background: #f1f1f1;
+  --foreground: #141414;
+  --muted-foreground: #acacac;
   --primary: #6258f0;
   --primary-foreground: white;
   --content: #ffffff;
@@ -14,6 +14,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -32,4 +33,14 @@ body {
 .scrollbar-none {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.mid-content {
+  width: clamp(280px, 60vw, 630px);
+}
+
+@media screen and (max-width: 500px) {
+  .mid-content {
+    width: 100%;
+  }
 }

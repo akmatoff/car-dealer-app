@@ -1,4 +1,5 @@
-import Card from "@/shared/components/Card";
+import Banner from "@/shared/components/Banner";
+import CarCard from "@/shared/components/CarCard";
 import { YEAR_OPTIONS } from "@/shared/constants";
 import { getVehicleMakes } from "@/shared/requests/getVehicleMakes";
 import { getVehicleModels } from "@/shared/requests/getVehicleModels";
@@ -24,13 +25,11 @@ export default async function ResultsPage({
   const models = await getVehicleModels(+makeId, +year);
 
   return (
-    <div className="">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-        {models.map((model) => (
-          <Card key={model.Model_ID}>
-            <p>{model.Make_Name}</p>
-            <h1 className="font-bold">{model.Model_Name}</h1>
-          </Card>
+    <div className="flex flex-col gap-6 min-h-[90dvh] mid-content">
+      <Banner text="Results" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+        {models.map((model, index) => (
+          <CarCard model={model} key={`${model.Model_ID}-${index}`} />
         ))}
       </div>
     </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/shared/components/Header";
+import { ToastContainer } from "react-toastify";
 
 const poppins = Poppins({ weight: ["300", "400", "500", "600", "700"] });
 
@@ -17,9 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased`}>
+      <body className={`${poppins.className} antialiased p-5 md:p-0`}>
+        <ToastContainer />
         <Header />
-        <main className="flex flex-col justify-center items-center min-h-screen">
+        <main className="flex flex-col justify-center items-center min-h-[90dvh] pb-10">
           {children}
         </main>
       </body>
