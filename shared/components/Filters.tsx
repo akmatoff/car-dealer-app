@@ -35,7 +35,7 @@ export default function Filters({ vehicleMakes }: Props) {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col md:flex-row gap-3">
-        <div className="flex gap-3 flex-[3_1_20%]">
+        <div className="flex gap-3 flex-[3_1_0%]">
           <Dropdown
             items={vehicleMakesOptions}
             title="Select car make"

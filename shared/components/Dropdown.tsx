@@ -65,11 +65,15 @@ export default function Dropdown({ items, title, onSelect }: Props) {
     <div className="relative w-full" ref={dropdownRef}>
       <Button onClick={toggle} variant="secondary" isCentered={false}>
         <ArrowDownIcon color="var(--foreground)" />{" "}
-        {selectedOption?.label || title}
+        <h1 className="line-clamp-1">{selectedOption?.label || title}</h1>
       </Button>
       {isOpen && (
         <div className="absolute z-20 flex flex-col gap-1 mt-1">
-          <SearchBar className="relative" onChange={handleSearchChange} />
+          <SearchBar
+            className="relative"
+            onChange={handleSearchChange}
+            placeholder="Start typing..."
+          />
           <div className="relative p-1 max-h-64 md:max-h-96 overflow-y-scroll bg-content rounded-xl scrollbar-none">
             {!!filteredItems.length &&
               filteredItems.map((item, index) => (

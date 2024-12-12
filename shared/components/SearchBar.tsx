@@ -3,10 +3,11 @@ import { cn } from "../utils";
 
 interface Props {
   className?: string;
+  placeholder?: string;
   onChange: (value: string) => void;
 }
 
-export default function SearchBar({ className, onChange }: Props) {
+export default function SearchBar({ className, placeholder, onChange }: Props) {
   return (
     <div
       className={cn(
@@ -16,6 +17,7 @@ export default function SearchBar({ className, onChange }: Props) {
     >
       <SearchIcon color="var(--muted-foreground)" />
       <input
+        placeholder={placeholder}
         className="outline-none bg-content text-foreground"
         onChange={(e) => onChange(e.target.value)}
       />

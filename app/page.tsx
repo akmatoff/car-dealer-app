@@ -6,7 +6,7 @@ export default async function Home() {
   const vehicleMakes = await getVehicleMakes();
 
   return (
-    <section className="flex flex-col gap-4 min-h-[90dvh] mid-content">
+    <section className="flex flex-col gap-4 min-h-[85dvh] mid-content">
       <h1 className="font-extrabold text-4xl">
         Welcome to the CarDealerApp. Please select car make and year to view the
         cars

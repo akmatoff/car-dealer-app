@@ -23,7 +23,7 @@ export default function Button({
   return (
     <button
       disabled={isDisabled}
-      className={`flex gap-1 items-center ${
+      className={`flex gap-1 items-center  ${
         isCentered && "justify-center"
       } px-4 py-2 rounded-full w-full ${
         STYLES_BY_VARIANT[variant]
